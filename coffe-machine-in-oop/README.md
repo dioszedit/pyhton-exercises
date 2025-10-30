@@ -47,10 +47,6 @@ A program három fő osztályt használ:
 - **CoffeeMaker**: Nyilvántartja az erőforrásokat és elkészíti az italokat
 - **MoneyMachine**: Kezeli a pénzügyeket (fizetés, visszajáró, profit)
 
-## Követelmények
-
-- Python 3.x
-
 ## Megjegyzések
 
 A program egy egyszerű parancssori alkalmazás, amely oktatási célokra készült az OOP koncepciók bemutatására.
