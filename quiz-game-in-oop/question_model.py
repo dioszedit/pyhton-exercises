@@ -7,7 +7,7 @@ class Question:
         answer (str): A kérdés helyes válasza (általában "True" vagy "False")
     """
 
-    def __init__(self, q_text, q_answer):
+    def __init__(self, q_text: str, q_answer: str) -> None:
         """
         Inicializálja a Question objektumot.
 
