@@ -1,3 +1,4 @@
+# Forrás: https://opentdb.com/api.php?amount=15&category=11&difficulty=easy&type=boolean
 question_data = [
     {
         "text": "Leonardo DiCaprio won an Oscar for Best Actor in 2004's \"The Aviator\".",
