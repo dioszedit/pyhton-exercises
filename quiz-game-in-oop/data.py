@@ -1,14 +1,14 @@
 question_data = [
     {
-        "text": "Leonardo DiCaprio won an Oscar for Best Actor in 2004&#039;s &quot;The Aviator&quot;.",
+        "text": "Leonardo DiCaprio won an Oscar for Best Actor in 2004's \"The Aviator\".",
         "answer": "False",
     },
     {
-        "text": "&quot;Foodfight!&quot; earned less than $80,000 at box office.",
+        "text": "\"Foodfight!\" earned less than $80,000 at box office.",
         "answer": "True",
     },
     {
-        "text": "Han Solo&#039;s co-pilot and best friend, &quot;Chewbacca&quot;, is an Ewok.",
+        "text": "Han Solo's co-pilot and best friend, \"Chewbacca\", is an Ewok.",
         "answer": "False",
     },
     {
@@ -20,11 +20,11 @@ question_data = [
         "answer": "True",
     },
     {
-        "text": "The 2010 film &quot;The Social Network&quot; is a biographical drama film about MySpace founder Tom Anderson.",
+        "text": "The 2010 film \"The Social Network\" is a biographical drama film about MySpace founder Tom Anderson.",
         "answer": "False",
     },
     {
-        "text": "The film &quot;2001: A Space Odyssey&quot; was released on December 31st, 2000.",
+        "text": "The film \"2001: A Space Odyssey\" was released on December 31st, 2000.",
         "answer": "False",
     },
     {
@@ -32,11 +32,11 @@ question_data = [
         "answer": "True",
     },
     {
-        "text": "In Alfred Hitchcock&#039;s film &#039;Psycho&#039; it is said he used chocolate syrup to simulate the blood in the famous shower scene from ",
+        "text": "In Alfred Hitchcock's film 'Psycho' it is said he used chocolate syrup to simulate the blood in the famous shower scene from ",
         "answer": "True",
     },
     {
-        "text": "In the movie The Revenant, DiCaprio&#039;s character hunts down the killer of his son.",
+        "text": "In the movie The Revenant, DiCaprio's character hunts down the killer of his son.",
         "answer": "True",
     },
     {
@@ -48,15 +48,15 @@ question_data = [
         "answer": "False",
     },
     {
-        "text": "Brandon Routh plays the titular character in the movie &quot;John Wick&quot;.",
+        "text": "Brandon Routh plays the titular character in the movie \"John Wick\".",
         "answer": "False",
     },
     {
-        "text": "Samuel L. Jackson had the words, &#039;Bad Motherf*cker&#039; in-scripted on his lightsaber during the filming of Star Wars.",
+        "text": "Samuel L. Jackson had the words, 'Bad Motherf*cker' in-scripted on his lightsaber during the filming of Star Wars.",
         "answer": "True",
     },
     {
-        "text": "In the original script of &quot;The Matrix&quot;, the machines used humans as additional computing power instead of batteries.",
+        "text": "In the original script of \"The Matrix\", the machines used humans as additional computing power instead of batteries.",
         "answer": "True",
     }
 ]
