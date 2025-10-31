@@ -18,6 +18,7 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 
 - **`quiz-game-in-oop/`** - Interaktív kvízjáték OOP alapokon
 - **`coffe-machine-in-oop/`** - Kávégép szimulátor objektumorientált megközelítéssel
+- **`turtle-graphics/`** - Turtle Graphics (teknőc grafika) - Python Gyakorlatok
 
 ## Használat
 
