@@ -19,7 +19,8 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`quiz-game-in-oop/`** - Interaktív kvízjáték OOP alapokon
 - **`coffe-machine-in-oop/`** - Kávégép szimulátor objektumorientált megközelítéssel
 - **`turtle-graphics/`** - Turtle Graphics (teknőc grafika) - Python Gyakorlatok
-- **`hirst_spot_painting/`** - Hirst-stílusú pöttyös festmény készítése - Turtle grafikával
+- **`hirst_spot_painting/`** - Hirst-stílusú pöttyös festmény készítése - teknőc grafikával
+- **`turtle-race/`** - Teknőc Verseny Szimuláció - teknőc grafikával
 
 ## Használat
 
@@ -45,3 +46,11 @@ A projektek az alábbi témákat fedik le:
 - Konstruktorok
 - Típus annotációk
 - Docstringek és dokumentáció
+- Turtle Graphics könyvtár használata
+- Véletlenszerűség (random modul)
+- Színek kezelése (RGB, hexadecimális)
+- Event-driven programozás (eseménykezelés)
+- Külső könyvtárak használata
+- Lista és tuple műveletek
+- Iteráció és ciklusok
+- Képfeldolgozás alapjai
