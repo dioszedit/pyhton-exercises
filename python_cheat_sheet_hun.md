@@ -555,8 +555,7 @@ class Car:
         print("Building car")
 
 my_toyota = Car()
-# Látni fogod, hogy "building car"
-# ki lett írva.
+# Látni fogod, hogy "building car" ki lett írva.
 ```
 
 ###  Osztály öröklődés (Inheritance)
