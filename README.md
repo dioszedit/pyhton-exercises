@@ -55,3 +55,7 @@ A projektek az alábbi témákat fedik le:
 - Lista és tuple műveletek
 - Iteráció és ciklusok
 - Képfeldolgozás alapjai
+
+## Licenc
+
+Ez egy oktatási projekt, szabadon használható és módosítható.
