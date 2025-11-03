@@ -409,9 +409,15 @@ A lista index és a kettőspont szimbólum használatával szétvághatsz egy li
 A kezdet benne van, de a vég nincs.
 ```python
 # list[start:end]
-letters = ["a","b","c","d"]
+letters = ["a","b","c","d","e","f"]
 letters[1:3]
 # Eredmény: ["b", "c"]
+letters[2:5:2] # 2-től 5-ig nézzük, de csak minden 2.-at szeretnénk megkapni
+# Eredmény: ["c", "e"]
+letters[::2] # minden 2. elemet szeretnénk megkapni
+# Erdemény: ["a", "c", "e"]
+letters[::-1] # megfordítja a listát
+# Eredmény ["f", "e", "d", "c", "b", "a"]
 ```
 
 ---
