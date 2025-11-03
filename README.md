@@ -58,4 +58,4 @@ A projektek az alábbi témákat fedik le:
 
 ## Licenc
 
-Ez egy oktatási projekt, szabadon használható és módosítható.
+Ezek a projektek oktatási célokat szolgálnak, szabadon használhatók és módosíthatók.
