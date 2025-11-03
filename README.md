@@ -21,6 +21,7 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`turtle-graphics/`** - Turtle Graphics (teknőc grafika) - Python Gyakorlatok
 - **`hirst_spot_painting/`** - Hirst-stílusú pöttyös festmény készítése - teknőc grafikával
 - **`turtle-race/`** - Teknőc Verseny Szimuláció - teknőc grafikával
+- **`snake-game/`** - Klasszikus Snake (kígyós) játék teknőc grafikával és OOP-vel
 
 ## Használat
 
