@@ -1,0 +1,182 @@
+# Pong Game (Pong Játék) 🏓
+
+Klasszikus Pong játék implementáció Python Turtle Graphics használatával, objektumorientált programozási elvek alapján.
+
+## Leírás
+
+Ez a projekt a klasszikus Pong játékot valósítja meg, ahol két játékos egymás ellen játszik. A cél minél több pontot szerezni azáltal, hogy az ütővel visszaütöd a labdát az ellenfél felé. A játék addig tart, amíg a labda el nem hagyja a játékteret valamelyik oldalon.
+
+## Játékszabályok
+
+- Két játékos játszik egymás ellen (bal és jobb oldal)
+- A labda folyamatosan pattog a játéktéren
+- Ha a labda eléri valamelyik oldalsó falat, a játék véget ér
+- Pontot kapsz, ha az ütőddel eltalálod a labdát
+- A labda visszapattан a felső és alsó falakról
+- A labda visszapattan az ütőkről és irányt vált
+
+## Irányítás
+
+### Bal oldali játékos:
+- **W**: Ütő mozgatása felfelé
+- **S**: Ütő mozgatása lefelé
+
+### Jobb oldali játékos:
+- **↑ (Fel nyíl)**: Ütő mozgatása felfelé
+- **↓ (Le nyíl)**: Ütő mozgatása lefelé
+
+## Futtatás
+
+```bash
+cd pong-game
+python main.py
+```
+
+## Projekt Struktúra
+
+```
+pong-game/
+├── main.py          # Fő program, játék indítása
+├── gameboard.py     # Gameboard osztály - játéktér és főciklus
+├── ball.py          # Ball osztály - labda mozgása és pattanása
+├── racket.py        # Racket osztály - ütők kezelése
+├── scoreboard.py    # Scoreboard osztály - pontszám megjelenítés
+├── constans.py      # Konstansok (határok, irányok, formázás)
+└── README.md        # Ez a fájl
+```
+
+## Osztályok és Modulok
+
+### `Gameboard` (gameboard.py)
+
+A játékteret és a fő játéklogikát kezelő osztály.
+
+**Főbb metódusok:**
+- `create_net()`: Létrehozza a közép szaggatott hálóvonalat
+- `racket_listener()`: Beállítja a billentyűzet eseménykezelőket
+- `run()`: A játék fő ciklusa (mozgás, ütközésellenőrzés, pontszámítás)
+- `game_over()`: Megjeleníti a "GAME OVER" üzenetet
+
+### `Ball` (ball.py)
+
+A labdát reprezentáló osztály.
+
+**Főbb metódusok:**
+- `move()`: Mozgatja a labdát az aktuális irányba
+- `bounce_y()`: Megfordítja a labda függőleges irányát (felső/alsó fal)
+- `bounce_x()`: Megfordítja a labda vízszintes irányát (ütő találat)
+
+### `Racket` (racket.py)
+
+Az ütőket reprezentáló osztály.
+
+**Főbb metódusok:**
+- `up()`: Felfelé mozgatja az ütőt
+- `down()`: Lefelé mozgatja az ütőt
+
+### `Scoreboard` (scoreboard.py)
+
+A pontszámot kezelő és megjelenítő osztály.
+
+**Főbb metódusok:**
+- `show_score()`: Megjeleníti a jelenlegi pontszámot
+- `increase_score()`: Növeli a pontszámot eggyel
+
+### `constans.py`
+
+Konstansokat tartalmazó modul:
+- Irányok (UP, DOWN, LEFT, RIGHT)
+- Koordináta keretek (MAX_X, MIN_X, MAX_Y, MIN_Y)
+- Lépésköz és formázási beállítások
+
+### `main.py`
+
+A játék belépési pontja, amely létrehozza a játéktáblát és elindítja a játékot.
+
+## Főbb Funkciók
+
+1. **Kétjátékos mód**: Két játékos egyidejű játéka egy gépen
+2. **Folyamatos mozgás**: A labda automatikusan pattog a játéktéren
+3. **Pontszámítás**: Mindkét játékos külön pontszámmal rendelkezik
+4. **Fizikai szimúláció**: Realisztikus pattanás a falakon és ütőkön
+5. **Vizuális háló**: Szaggatott középvonal a játéktér elválasztására
+6. **Valós idejű irányítás**: Azonnali reakció a billentyűleütésekre
+7. **Játék vége detektálás**: Automatikus leállás, ha a labda elhagyja a pályát
+
+## Technikai Részletek
+
+- **Python verzió**: 3.x
+- **Használt könyvtár**: `turtle` (beépített), `time`, `random`
+- **Képernyő méret**: 800x600 pixel
+- **Játéktér**: -360 és 360 pixel között (x irány), -280 és 280 között (y irány)
+- **Frissítési sebesség**: ~0.1 másodperc/frame
+- **Ütő méret**: Téglalap (1x5 méretarány)
+- **Labda méret**: Kör alakú
+- **Labda lépésköz**: ±10 pixel/mozgás
+- **Ütő lépésköz**: 20 pixel/mozgás
+
+## Tanulási Témák
+
+Ez a projekt az alábbi programozási konceptusokat gyakorolja:
+
+- **OOP alapelvek**: Osztályok, öröklődés (Turtle osztályból), kompozíció
+- **Event-driven programozás**: Billentyűzet események kezelése
+- **Game loop**: Játék fő ciklus implementálása
+- **Ütközésérzékelés**: Távolság számítás (`distance()` metódus), határellenőrzés
+- **Fizikai szimuláció**: Pattanás logika implementálása
+- **Koordináta-geometria**: Pozíciók és mozgások számítása
+- **Modularitás**: Kód szétválasztása több fájlba és osztályba
+- **Típus annotációk**: Type hints használata minden metódusnál
+- **Dokumentáció**: Részletes docstringek és kommentek magyarul
+- **Véletlenszerűség**: Random kezdő irány a labdának
+- **Több objektum kezelése**: Két játékos, két scoreboard szinkron működése
+
+## Testreszabási Lehetőségek
+
+A játékot könnyen személyre szabhatod:
+
+- **Labda sebessége**: `ball.py` → `x_move` és `y_move` értékek változtatása
+- **Játéksebesség**: `gameboard.py` → `time.sleep(0.1)` érték módosítása
+- **Színek**: Háttér, labda, ütők, háló színének megváltoztatása
+- **Pálya méret**: `constans.py` → MAX/MIN koordináták módosítása
+- **Ütő méret**: `racket.py` → `shapesize()` paraméterek változtatása
+- **Pontszám pozíció**: `gameboard.py` → Scoreboard pozíció koordináták
+- **Ütő sebessége**: `constans.py` → `MOVE_DISTANCE` érték módosítása
+
+## Fejlesztési Ötletek
+
+- **Ponthatár**: Játék vége X pont elérésekor (pl. 5 vagy 10 pont)
+- **Nehézségi szintek**: Növekvő labda sebesség idővel vagy pont után
+- **AI ellenfél**: Egyágékos mód számítógép ellenfél hozzáadásával
+- **Hangeffektek**: Ütközés hangok hozzáadása
+- **Színes pálya témák**: Különböző színsémák választása
+- **Labda effektek**: Forgó animáció, fénycsóva
+- **Statisztikák**: Leghosszabb rally, átlagos ütés/perc
+- **Szünet funkció**: Játék megállítása és folytatása
+- **Képernyővédő mód**: Automatikus játék AI vs AI
+- **Több labda mód**: Egyszerre több labda a pályán
+- **Power-up-ok**: Speciális képességek (nagyobb ütő, lassabb labda)
+- **High score táblázat**: Legjobb eredmények mentése fájlba
+
+## Játék Dinamika
+
+### Pontszerzés
+- A pontszámot akkor növeljük, amikor a labda eltalálja az ütőt
+- Ez motiválja a játékosokat az aktív védekezésre és támadásra
+
+### Játék vége
+- A játék akkor ér véget, ha a labda elhagyja a pályát valamelyik oldalon
+- Ez történhet akkor, ha valamelyik játékos nem éri el időben a labdát
+
+### Stratégia
+- Pozicionálás: Az ütő megfelelő magasságban tartása
+- Reakcióidő: Gyors reagálás a labda irányváltozásaira
+- Előrelátás: A labda pályájának előrejelzése
+
+## Licenc
+
+Ez egy oktatási projekt, szabadon használható és módosítható.
+
+---
+
+**Jó játékot! 🏓**
