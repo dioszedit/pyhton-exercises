@@ -22,6 +22,7 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`hirst_spot_painting/`** - Hirst-stílusú pöttyös festmény készítése - teknőc grafikával
 - **`turtle-race/`** - Teknőc Verseny Szimuláció - teknőc grafikával
 - **`snake-game/`** - Klasszikus Snake (kígyós) játék teknőc grafikával és OOP-vel
+- **`pong-game/`** - Klasszikus Pong játék implementáció teknőc grafikával és OOP-vel.
 
 ## Használat
 
