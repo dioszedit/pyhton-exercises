@@ -1,19 +1,20 @@
 # Pong Game (Pong Játék) 🏓
 
-Klasszikus Pong játék implementáció Python Turtle Graphics használatával, objektumorientált programozási elvek alapján.
+Klasszikus Pong játék implementáció Python Turtle Graphics használatával, OOP elvek alapján.
 
 ## Leírás
 
-Ez a projekt a klasszikus Pong játékot valósítja meg, ahol két játékos egymás ellen játszik. A cél minél több pontot szerezni azáltal, hogy az ütővel visszaütöd a labdát az ellenfél felé. A játék addig tart, amíg a labda el nem hagyja a játékteret valamelyik oldalon.
+Ez a projekt a klasszikus Pong játékot valósítja meg, ahol két játékos egymás ellen játszik. A cél 10 pontot elérni úgy, hogy megvéded a saját oldalad, és az ellenfél nem éri el a labdát. Az első játékos, aki eléri a 10 pontot, megnyeri a játékot.
 
 ## Játékszabályok
 
 - Két játékos játszik egymás ellen (bal és jobb oldal)
 - A labda folyamatosan pattog a játéktéren
-- Ha a labda eléri valamelyik oldalsó falat, a játék véget ér
-- Pontot kapsz, ha az ütőddel eltalálod a labdát
-- A labda visszapattан a felső és alsó falakról
+- Pontot szerzel, ha az ellenfeled nem éri el a labdát (a labda eléri az ellenfél oldalfalát)
+- A labda visszapattan a felső és alsó falakról
 - A labda visszapattan az ütőkről és irányt vált
+- Minden egyes pont után a labda visszakerül a játéktér közepére
+- **A játék akkor ér véget, amikor valamelyik játékos eléri a 10 pontot**
 
 ## Irányítás
 
@@ -65,6 +66,7 @@ A labdát reprezentáló osztály.
 - `move()`: Mozgatja a labdát az aktuális irányba
 - `bounce_y()`: Megfordítja a labda függőleges irányát (felső/alsó fal)
 - `bounce_x()`: Megfordítja a labda vízszintes irányát (ütő találat)
+- `reset_position()`: Visszahelyezi a labdát a játéktér közepére új véletlenszerű iránnyal
 
 ### `Racket` (racket.py)
 
@@ -98,10 +100,12 @@ A játék belépési pontja, amely létrehozza a játéktáblát és elindítja 
 1. **Kétjátékos mód**: Két játékos egyidejű játéka egy gépen
 2. **Folyamatos mozgás**: A labda automatikusan pattog a játéktéren
 3. **Pontszámítás**: Mindkét játékos külön pontszámmal rendelkezik
-4. **Fizikai szimúláció**: Realisztikus pattanás a falakon és ütőkön
-5. **Vizuális háló**: Szaggatott középvonal a játéktér elválasztására
-6. **Valós idejű irányítás**: Azonnali reakció a billentyűleütésekre
-7. **Játék vége detektálás**: Automatikus leállás, ha a labda elhagyja a pályát
+4. **Ponthatár rendszer**: A játék 10 pontig tart, az első játékos, aki eléri, megnyeri a játékot
+5. **Automatikus labda reset**: Minden pont után a labda visszakerül a középre új iránnyal
+6. **Fizikai szimúláció**: Realisztikus pattanás a falakon és ütőkön
+7. **Vizuális háló**: Szaggatott középvonal a játéktér elválasztására
+8. **Valós idejű irányítás**: Azonnali reakció a billentyűleütésekre
+9. **Játék vége detektálás**: Automatikus leállás 10 pont elérésekor
 
 ## Technikai Részletek
 
@@ -135,6 +139,7 @@ Ez a projekt az alábbi programozási konceptusokat gyakorolja:
 
 A játékot könnyen személyre szabhatod:
 
+- **Ponthatár**: `gameboard.py` → `if self.person_left.score == 10 or self.person_right.score == 10:` sor módosítása
 - **Labda sebessége**: `ball.py` → `x_move` és `y_move` értékek változtatása
 - **Játéksebesség**: `gameboard.py` → `time.sleep(0.1)` érték módosítása
 - **Színek**: Háttér, labda, ütők, háló színének megváltoztatása
@@ -145,33 +150,39 @@ A játékot könnyen személyre szabhatod:
 
 ## Fejlesztési Ötletek
 
-- **Ponthatár**: Játék vége X pont elérésekor (pl. 5 vagy 10 pont)
+- **Állítható ponthatár**: A játék végének pontszámának testreszabása (pl. 5, 10, 15 pont)
 - **Nehézségi szintek**: Növekvő labda sebesség idővel vagy pont után
-- **AI ellenfél**: Egyágékos mód számítógép ellenfél hozzáadásával
-- **Hangeffektek**: Ütközés hangok hozzáadása
+- **AI ellenfél**: Egyjátékos mód számítógép ellenfél hozzáadásával
+- **Hangeffektek**: Ütközés hangok hozzáadása (ütő találat, falba ütközés, pontszerzés)
 - **Színes pálya témák**: Különböző színsémák választása
 - **Labda effektek**: Forgó animáció, fénycsóva
-- **Statisztikák**: Leghosszabb rally, átlagos ütés/perc
-- **Szünet funkció**: Játék megállítása és folytatása
+- **Statisztikák**: Leghosszabb rally, átlagos ütés/perc, pontok eloszlása
+- **Szünet funkció**: Játék megállítása és folytatása (Space billentyű)
 - **Képernyővédő mód**: Automatikus játék AI vs AI
 - **Több labda mód**: Egyszerre több labda a pályán
-- **Power-up-ok**: Speciális képességek (nagyobb ütő, lassabb labda)
-- **High score táblázat**: Legjobb eredmények mentése fájlba
+- **Power-up-ok**: Speciális képességek (nagyobb ütő, lassabb labda, kisebb ütő az ellenfélnél)
+- **High score táblázat**: Legjobb eredmények mentése fájlba játékonként
+- **Nyerő kijelzése**: Megjeleníti, hogy melyik játékos nyert (bal vagy jobb)
+- **Új játék funkció**: Játék újraindítása a vége után billentyűleütéssel
 
 ## Játék Dinamika
 
 ### Pontszerzés
-- A pontszámot akkor növeljük, amikor a labda eltalálja az ütőt
-- Ez motiválja a játékosokat az aktív védekezésre és támadásra
+- Pontot akkor szerzel, amikor az ellenfeled nem éri el a labdát
+- Ha a labda eléri a bal oldali falat, a jobb oldali játékos kap pontot
+- Ha a labda eléri a jobb oldali falat, a bal oldali játékos kap pontot
+- Minden pont után a labda visszakerül a középre új véletlenszerű iránnyal
 
 ### Játék vége
-- A játék akkor ér véget, ha a labda elhagyja a pályát valamelyik oldalon
-- Ez történhet akkor, ha valamelyik játékos nem éri el időben a labdát
+- A játék akkor ér véget, amikor valamelyik játékos eléri a 10 pontot
+- A győztes az a játékos, aki először éri el a ponthatárt
+- A játék végeztével megjelenik a "GAME OVER" felirat
 
 ### Stratégia
 - Pozicionálás: Az ütő megfelelő magasságban tartása
 - Reakcióidő: Gyors reagálás a labda irányváltozásaira
 - Előrelátás: A labda pályájának előrejelzése
+- Védekezés: A labda elérése, mielőtt az eléri a hátsó falat
 
 ## Licenc
 

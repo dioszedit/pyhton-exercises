@@ -52,3 +52,11 @@ class Ball(Turtle):
         Megfordítja a labda vízszintes irányát.
         """
         self.x_move *= -1
+
+    def reset_position(self) -> None:
+        """
+        A játéktér közepére helyezi a labdát és az ellenkező játékos felé irányítja a labdát
+        """
+        self.goto(0, 0)
+        self.y_move = random.choice([-10, 10])
+        self.bounce_x()

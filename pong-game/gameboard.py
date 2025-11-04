@@ -19,7 +19,7 @@ class Gameboard:
         self.screen.setup(width=800, height=600)
         self.screen.bgcolor("black")
         self.screen.title("Pong")
-        self.screen.tracer(0) # Kikapcsolja az automatikus képernyő frissítést
+        self.screen.tracer(0)  # Kikapcsolja az automatikus képernyő frissítést
 
         # Bal oldali játékos inicializálása
         self.person_left = Scoreboard((-80, 220))
@@ -90,25 +90,29 @@ class Gameboard:
             time.sleep(0.1)
             self.screen.update()
 
-            # Vízszintesen falnak ütközik a labda, ilyenkor véga a játéknak
-            if (self.ball.xcor() > MAX_X
-                    or self.ball.xcor() < MIN_X):
+            if self.person_left.score == 10 or self.person_right.score == 10:
                 is_on_game = False
+            else:
+                # Vízszintesen falnak ütközik a labda
+                if self.ball.xcor() > MAX_X:
+                    self.person_left.increase_score()
+                    self.ball.reset_position()
 
-            # Fent vagy lent falnak ütjözik a labda, akkor visszapattan
-            if self.ball.ycor() > MAX_Y or self.ball.ycor() < MIN_Y:
-                self.ball.bounce_y()
+                if self.ball.xcor() < MIN_X:
+                    self.person_right.increase_score()
+                    self.ball.reset_position()
 
-            # Bal ütőnek ütközik a labda
-            if self.ball.distance(self.racket_left) < 50 and self.ball.xcor() < (MIN_X + 30):
-                self.ball.bounce_x()
-                self.person_left.increase_score()
+                # Fent vagy lent falnak ütjözik a labda, akkor visszapattan
+                if self.ball.ycor() > MAX_Y or self.ball.ycor() < MIN_Y:
+                    self.ball.bounce_y()
 
-            # Jobb ütőnek ütközik a labda
-            if self.ball.distance(self.racket_right) < 50 and self.ball.xcor() > (MAX_X - 30):
-                self.ball.bounce_x()
-                self.person_right.increase_score()
+                # Bal ütőnek ütközik a labda
+                if self.ball.distance(self.racket_left) < 50 and self.ball.xcor() < (MIN_X + 30):
+                    self.ball.bounce_x()
 
+                # Jobb ütőnek ütközik a labda
+                if self.ball.distance(self.racket_right) < 50 and self.ball.xcor() > (MAX_X - 30):
+                    self.ball.bounce_x()
 
         self.game_over()
         self.screen.exitonclick()
