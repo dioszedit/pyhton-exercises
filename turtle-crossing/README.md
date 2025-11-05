@@ -2,7 +2,7 @@
 
 Egy egyszerű, Python Turtle grafikus könyvtárral készült ügyességi játék kezdőknek.
 
-![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Turtle Graphics](https://img.shields.io/badge/turtle-graphics-orange.svg)
 
@@ -42,7 +42,7 @@ Irányítsd a teknőst a képernyő aljától a tetejéig úgy, hogy elkerülöd
 
 ### Rendszerkövetelmények
 
-- Python 3.7 vagy újabb
+- Python 3.8 vagy újabb
 - Turtle könyvtár (alapértelmezetten a Pythonnal települ)
 
 ### Futtatás
@@ -187,7 +187,7 @@ if random.randint(0, 2) == 1:  # Változtasd meg a tartományt!
 - [ ] Power-up-ok (lassítás, pajzs)
 - [ ] Több sáv különböző sebességű autókkal
 
-## 📜 Licenc
+## Licenc
 
 Ez a projekt szabadon felhasználható oktatási célokra.
 

@@ -2,6 +2,9 @@
 
 Ez a repository különböző Python gyakorló projekteket tartalmaz, amelyek az objektumorientált programozás (OOP) alapelveinek elsajátítását szolgálják.
 
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 ## Projekt Célja
 
 A repository oktatási célú mini-projekteket gyűjt össze, amelyek segítenek:
