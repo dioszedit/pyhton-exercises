@@ -63,7 +63,7 @@ class Player(Turtle):
 
     def is_at_finish_line(self) -> bool:
         """
-        Ellenőrzi, hogy a játékos átlépte-e a cél vonalat
+        Ellenőrzi, hogy a játékos átlépte-e a célvonalat
         """
         if self.ycor() > FINISH_LINE_Y:
             return True
