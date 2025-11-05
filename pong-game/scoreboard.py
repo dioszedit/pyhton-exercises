@@ -1,5 +1,5 @@
 from turtle import Turtle
-from constans import ALIGNMENT, FONT
+from constants import ALIGNMENT, FONT
 
 
 class Scoreboard(Turtle):

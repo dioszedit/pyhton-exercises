@@ -2,8 +2,18 @@ from turtle import Screen, Turtle
 from scoreboard import Scoreboard
 from racket import Racket
 from ball import Ball
-from constans import UP, MIN_X, MAX_X, MIN_Y, MAX_Y, MOVE_DISTANCE, FONT, ALIGNMENT
+from constants import UP, MIN_X, MAX_X, MIN_Y, MAX_Y, MOVE_DISTANCE, FONT, ALIGNMENT
 import time
+
+
+def game_over() -> None:
+    """
+    GAME OVER feliratot jeleníti meg
+    """
+    text = Turtle()
+    text.hideturtle()
+    text.color("white")
+    text.write("GAME OVER", align=ALIGNMENT, font=FONT)
 
 
 class Gameboard:
@@ -71,15 +81,6 @@ class Gameboard:
         self.screen.onkey(self.racket_right.up, "Up")
         self.screen.onkey(self.racket_right.down, "Down")
 
-    def game_over(self) -> None:
-        """
-        GAME OVER feliratot jeleníti meg
-        """
-        text = Turtle()
-        text.hideturtle()
-        text.color("white")
-        text.write("GAME OVER", align=ALIGNMENT, font=FONT)
-
     def run(self) -> None:
         """
         A játék fő ciklusa.
@@ -114,5 +115,5 @@ class Gameboard:
                 if self.ball.distance(self.racket_right) < 50 and self.ball.xcor() > (MAX_X - 30):
                     self.ball.bounce_x()
 
-        self.game_over()
+        game_over()
         self.screen.exitonclick()

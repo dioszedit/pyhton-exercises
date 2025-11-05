@@ -1,6 +1,6 @@
 import random
 from turtle import Turtle
-from constans import BALL_STEP, MAX_X, MAX_Y
+from constants import BALL_STEP
 
 
 class Ball(Turtle):
@@ -28,8 +28,8 @@ class Ball(Turtle):
         self.penup()
 
         # Véletlenszerű kezdő irány választása
-        self.x_move = random.choice([-10, 10])  # Balra vagy jobbra
-        self.y_move = random.choice([-10, 10])  # Fel vagy le
+        self.x_move = random.choice([-BALL_STEP, BALL_STEP])  # Balra vagy jobbra
+        self.y_move = random.choice([-BALL_STEP, BALL_STEP])  # Fel vagy le
 
     def move(self) -> None:
         """
@@ -58,5 +58,5 @@ class Ball(Turtle):
         A játéktér közepére helyezi a labdát és az ellenkező játékos felé irányítja a labdát
         """
         self.goto(0, 0)
-        self.y_move = random.choice([-10, 10])
+        self.y_move = random.choice([-BALL_STEP, BALL_STEP])
         self.bounce_x()

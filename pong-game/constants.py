@@ -6,21 +6,21 @@ a játék különböző részei használnak (pozíciók, méretek, irányok, stb
 """
 
 # Szöveg formázásokhoz: pl.: pontszám megjelenítéséhez
-ALIGNMENT = "center"
-FONT = ("Courier", 40, "normal")
+ALIGNMENT: str = "center"
+FONT: tuple[str, int, str] = ("Courier", 40, "normal")
 
 # Irányok fokban megdava
-UP = 90
-DOWN = 270
-LEFT = 180
-RIGHT = 0
+UP: int = 90
+DOWN: int = 270
+LEFT: int = 180
+RIGHT: int = 0
 
 # Lépésköz - háló rajzoláshoz és ütő mozgatáshoz
-MOVE_DISTANCE = 20
-BALL_STEP = 10
+MOVE_DISTANCE: int = 20
+BALL_STEP: int = 10
 
 # Koordináta keretek
-MAX_Y = 280
-MIN_Y = -280
-MAX_X = 360
-MIN_X = -360
+MAX_Y: int = 280
+MIN_Y: int = -280
+MAX_X: int = 360
+MIN_X: int = -360

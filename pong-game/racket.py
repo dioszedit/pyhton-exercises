@@ -1,5 +1,5 @@
 from turtle import Turtle
-import constans
+import constants
 
 
 class Racket(Turtle):
@@ -27,7 +27,7 @@ class Racket(Turtle):
         self.color("white")
         self.shape("square")
         self.shapesize(stretch_wid=1, stretch_len=5)
-        self.setheading(constans.UP)
+        self.setheading(constants.UP)
         self.goto(position)
         self.speed("fastest")
 
@@ -38,8 +38,8 @@ class Racket(Turtle):
         Ellenőrzi, hogy az ütő nem lépné-e túl a felső határt,
         majd ha nem, akkor elmozgatja felfelé a megadott távolsággal.
         """
-        if self.ycor() < constans.MAX_Y - constans.MOVE_DISTANCE:
-            new_y = self.ycor() + constans.MOVE_DISTANCE
+        if self.ycor() < constants.MAX_Y - constants.MOVE_DISTANCE:
+            new_y = self.ycor() + constants.MOVE_DISTANCE
             self.goto(x=self.xcor(), y=new_y)
 
     def down(self) -> None:
@@ -49,6 +49,6 @@ class Racket(Turtle):
         Ellenőrzi, hogy az ütő nem lépné-e túl az alsó határt,
         majd ha nem, akkor elmozgatja lefelé a megadott távolsággal.
         """
-        if self.ycor() > (constans.MIN_Y + constans.MOVE_DISTANCE):
-            new_y = self.ycor() - constans.MOVE_DISTANCE
+        if self.ycor() > (constants.MIN_Y + constants.MOVE_DISTANCE):
+            new_y = self.ycor() - constants.MOVE_DISTANCE
             self.goto(x=self.xcor(), y=new_y)

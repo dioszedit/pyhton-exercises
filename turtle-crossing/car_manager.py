@@ -9,8 +9,8 @@ import random
 from turtle import Turtle
 
 # Konstansok az autók megjelenéséhez és mozgásához
-COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
-MOVE_INCREMENT = 10
+COLORS: list[str] = ["red", "orange", "yellow", "green", "blue", "purple"]
+MOVE_INCREMENT: int = 10
 
 
 class CarManager:
@@ -72,7 +72,7 @@ class CarManager:
         if self.car_speed == 0.016:
             return
 
-        self.car_speed *= 0.9 # 10%-os gyorsítás
+        self.car_speed *= 0.9  # 10%-os gyorsítás
 
         # Gyorsítás nem mehet a végtelenségig, ezért korlátozzuk
         # Windows környezetben 0.016 mp (16 ms) ≈ 60 FPS

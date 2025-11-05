@@ -58,7 +58,7 @@ def turtle_step(gap: int) -> None:
     turtle.pendown()
 
 
-def draw_spots(colors, row_or_col_num) -> None:
+def draw_spots(colors, row_or_col_num: int) -> None:
     """
     Pöttyök négyzetrácsát rajzolja a megadott színekkel.
 

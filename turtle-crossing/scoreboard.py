@@ -8,9 +8,9 @@ aktuális szintjét jeleníti meg és kezeli a játék vége üzenetet.
 from turtle import Turtle
 
 # Konstansok a szöveg megjelenítéséhez
-FONT = ("Courier", 24, "normal")
-ALIGNMENT_CENTER = "center"
-ALIGNMENT_LEFT = "left"
+FONT: tuple[str, int, str] = ("Courier", 24, "normal")
+ALIGNMENT_CENTER: str = "center"
+ALIGNMENT_LEFT: str = "left"
 
 
 class Scoreboard(Turtle):

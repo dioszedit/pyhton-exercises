@@ -8,11 +8,11 @@ irányított teknőst reprezentálja.
 from turtle import Turtle
 
 # Konstansok a játékos pozíciójához és mozgásához
-STARTING_POSITION = (0, -280) # Kezdőpozíció a képernyő alján
-MOVE_DISTANCE = 10 # Egy lépés távolsága pixelben
-FINISH_LINE_Y = 280 # Célvonal y koordinátája
-UP = 90 # Felfelé irány (fok)
-DOWN = 270 # Lefelé irány (fok)
+STARTING_POSITION: tuple[int, int] = (0, -280)  # Kezdőpozíció a képernyő alján
+MOVE_DISTANCE: int = 10  # Egy lépés távolsága pixelben
+FINISH_LINE_Y: int = 280  # Célvonal y koordinátája
+UP: int = 90  # Felfelé irány (fok)
+DOWN: int = 270  # Lefelé irány (fok)
 
 
 class Player(Turtle):
@@ -30,8 +30,8 @@ class Player(Turtle):
         Beállítja a teknős megjelenését, sebességét és kezdőpozícióját.
         """
         super().__init__()
-        self.shape("turtle") # Teknős alakú kurzor
-        self.speed("fastest") # Animáció sebessége (nem a mozgási sebesség!)
+        self.shape("turtle")  # Teknős alakú kurzor
+        self.speed("fastest")  # Animáció sebessége (nem a mozgási sebesség!)
         self.penup()
         self.setheading(UP)
         self.goto(STARTING_POSITION)

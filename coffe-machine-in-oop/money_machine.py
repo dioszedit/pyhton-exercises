@@ -1,30 +1,36 @@
 class MoneyMachine:
-    CURRENCY = "$"
+    CURRENCY: str = "$"
 
-    COIN_VALUES = {
+    COIN_VALUES: dict = {
         "quarters": 0.25,
         "dimes": 0.10,
         "nickles": 0.05,
         "pennies": 0.01
     }
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.profit = 0
         self.money_received = 0
 
-    def report(self):
-        """Prints the current profit"""
+    def report(self) -> None:
+        """
+        Kinyomtatja az aktuális egyenleget
+        """
         print(f"Money: {self.CURRENCY}{self.profit}")
 
-    def process_coins(self):
-        """Returns the total calculated from coins inserted."""
+    def process_coins(self) -> int:
+        """
+        A bedobott érmékből kiszámított összeget adja vissza.
+        """
         print("Please insert coins.")
         for coin in self.COIN_VALUES:
             self.money_received += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
         return self.money_received
 
-    def make_payment(self, cost):
-        """Returns True when payment is accepted, or False if insufficient."""
+    def make_payment(self, cost: float) -> bool:
+        """
+        True értéket ad vissza, ha a fizetés elfogadva, vagy False értéket, ha nem elegendő.
+        """
         self.process_coins()
         if self.money_received >= cost:
             change = round(self.money_received - cost, 2)
