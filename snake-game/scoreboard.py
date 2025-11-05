@@ -1,8 +1,8 @@
 from turtle import Turtle
 
 # Konstansok a pontszám, játék vége feliratok megjelenítéséhez
-ALIGNMENT = "center"
-FONT = ("Courier", 20, "normal")
+ALIGNMENT: str = "center"
+FONT: tuple[str, int, str] = ("Courier", 20, "normal")
 
 
 class Scoreboard(Turtle):
@@ -15,7 +15,7 @@ class Scoreboard(Turtle):
         score (int): A jelenlegi pontszám
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Inicializálja a Scoreboard objektumot.
 
@@ -31,7 +31,7 @@ class Scoreboard(Turtle):
         self.goto(x=0, y=270)
         self.show_score()
 
-    def increase_score(self):
+    def increase_score(self) -> None:
         """
         Növeli a pontszámot eggyel és frissíti a kijelzést.
 
@@ -40,7 +40,7 @@ class Scoreboard(Turtle):
         self.score += 1
         self.show_score()
 
-    def show_score(self):
+    def show_score(self) -> None:
         """
         Megjeleníti a jelenlegi pontszámot a képernyőn.
 
@@ -49,7 +49,7 @@ class Scoreboard(Turtle):
         self.clear()
         self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
 
-    def game_over(self):
+    def game_over(self) -> None:
         """
         Megjeleníti a "GAME OVER" üzenetet a képernyő közepén.
 

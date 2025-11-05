@@ -1,11 +1,11 @@
 from turtle import Turtle
 
 # Konstansok a kígyó mozgásához és irányításához
-MOVE_DISTANCE = 20
-UP = 90
-DOWN = 270
-LEFT = 180
-RIGHT = 0
+MOVE_DISTANCE: int = 20
+UP: int = 90
+DOWN: int = 270
+LEFT: int = 180
+RIGHT: int = 0
 
 
 class Snake:
@@ -33,7 +33,7 @@ class Snake:
         #  Minden szegmens egy fehér négyzet, amelyek vízszintesen
         #  egymás mellett helyezkednek el.
         for segment in range(3):
-            self.add_segment((MOVE_DISTANCE * segment, 0))
+            self.add_segment((-MOVE_DISTANCE * segment, 0))
 
     def head(self) -> Turtle:
         """
