@@ -72,7 +72,7 @@ A pontszámot kezelő osztály.
 
 - `show_score()`: Megjeleníti a jelenlegi pontszámot
 - `increase_score()`: Növeli a pontszámot
-- `game_over()`: Megjeleníti a "GAME OVER" üzenetet
+- `show_game_over()`: Megjeleníti a "GAME OVER" üzenetet
 
 ### `main.py`
 

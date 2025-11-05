@@ -67,7 +67,7 @@ while game_is_on:
         # Ha a játékos 20 pixelnél közelebb van egy autóhoz, vége a játéknak
         if car.distance(player) < 20:
             game_is_on = False
-            level.game_over()
+            level.show_game_over()
 
     # Képernyő frissítése (manuális frissítés, mert a tracer ki van kapcsolva)
     screen.update()

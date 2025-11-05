@@ -99,7 +99,7 @@ Szint megjelenítő osztály:
 
 - `show_level()`: aktuális szint kiírása
 - `increase_level()`: szint növelése
-- `game_over()`: játék vége üzenet megjelenítése
+- `show_game_over()`: játék vége üzenet megjelenítése
 
 ## Amit Megtanulhatsz Ebből a Projektből
 

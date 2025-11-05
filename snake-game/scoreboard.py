@@ -49,7 +49,7 @@ class Scoreboard(Turtle):
         self.clear()
         self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
 
-    def game_over(self) -> None:
+    def show_game_over(self) -> None:
         """
         Megjeleníti a "GAME OVER" üzenetet a képernyő közepén.
 

@@ -6,7 +6,7 @@ from constants import UP, MIN_X, MAX_X, MIN_Y, MAX_Y, MOVE_DISTANCE, FONT, ALIGN
 import time
 
 
-def game_over() -> None:
+def show_game_over() -> None:
     """
     GAME OVER feliratot jeleníti meg
     """
@@ -115,5 +115,5 @@ class Gameboard:
                 if self.ball.distance(self.racket_right) < 50 and self.ball.xcor() > (MAX_X - 30):
                     self.ball.bounce_x()
 
-        game_over()
+        show_game_over()
         self.screen.exitonclick()

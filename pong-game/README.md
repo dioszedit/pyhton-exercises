@@ -56,7 +56,7 @@ A játékteret és a fő játéklogikát kezelő osztály.
 - `create_net()`: Létrehozza a közép szaggatott hálóvonalat
 - `racket_listener()`: Beállítja a billentyűzet eseménykezelőket
 - `run()`: A játék fő ciklusa (mozgás, ütközésellenőrzés, pontszámítás)
-- `game_over()`: Megjeleníti a "GAME OVER" üzenetet
+- `show_game_over()`: Megjeleníti a "GAME OVER" üzenetet
 
 ### `Ball` (ball.py)
 

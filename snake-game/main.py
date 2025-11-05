@@ -45,14 +45,14 @@ while game_is_on:
 
     #  ütközés vizsgálat a fallal
     if snake.head().xcor() > 280 or snake.head().xcor() < -280 or snake.head().ycor() > 280 or snake.head().ycor() < -280:
-        scoreboard.game_over()
+        scoreboard.show_game_over()
         game_is_on = False
 
     # ütközés vizsgálat a kígyó saját farkával
     # listák szeletelése (list slicing - list[start:end]) - az 1. indextől az utolsóig adja vissza a listát
     for segment in snake.body[1:]:  # minden szegmenst vizsgálunk kivéve a kígyó fejét
         if snake.head().distance(segment) < 10:
-            scoreboard.game_over()
+            scoreboard.show_game_over()
             game_is_on = False
 
 screen.exitonclick()  # Ablak bezárása kattintásra
