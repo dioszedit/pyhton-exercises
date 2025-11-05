@@ -19,7 +19,7 @@ Oktatási projekt - szabadon felhasználható
 import random
 import time
 from turtle import Screen
-from player import Player, FINISH_LINE_Y
+from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
@@ -49,7 +49,7 @@ while game_is_on:
     time.sleep(car_manager.car_speed)
 
     # Ellenőrzi, hogy a játékos elérte-e a célvonalat
-    if player.ycor() > FINISH_LINE_Y:
+    if player.is_at_finish_line():
         player.reset_position()  # Visszahelyezi a kezdőpozícióba
         level.increase_level()  # Növeli a szintet
         car_manager.increase_speed()  # Gyorsítja az autókat

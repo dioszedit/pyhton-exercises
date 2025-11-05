@@ -60,3 +60,12 @@ class Player(Turtle):
         """
         self.goto(STARTING_POSITION)
         self.setheading(UP)
+
+    def is_at_finish_line(self) -> bool:
+        """
+        Ellenőrzi, hogy a játékos átlépte-e a cél vonalat
+        """
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
