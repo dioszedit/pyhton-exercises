@@ -23,6 +23,7 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`turtle-race/`** - Teknőc Verseny Szimuláció - teknőc grafikával
 - **`snake-game/`** - Klasszikus Snake (kígyós) játék teknőc grafikával és OOP-vel
 - **`pong-game/`** - Klasszikus Pong játék implementáció teknőc grafikával és OOP-vel.
+- **`turtle-crossing/`** - Turtle Crossing játék implementáció teknőc grafikával és OOP-vel.
 
 ## Használat
 
