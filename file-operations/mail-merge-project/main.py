@@ -28,7 +28,7 @@ for name in names_contents:
     # A strip() eltávolítja a felesleges szóközöket és sortöréseket a név elejéről és végéről
     with open(f'output/ready-to-send/letter_for_{name.strip().lower().replace(' ', '_')}.txt', 'w') as new_letter:
         # A replace() metódus kicseréli a [name] helyőrzőt a tényleges névre
-        # A strip() itt is eltávolítja a whitespace karaktereket, kisbetűsítem és a nevkben találhat space helyettesítjük _ karakterre
+        # A strip() itt is eltávolítja a whitespace karaktereket, kisbetűsítem és a nevekben található space helyettesítjük _ karakterre
         # pl.: John Small -> letter_for_john_small.txt lesz a fájl neve
         # Az így elkészült személyre szabott levelet írjuk ki a fájlba
         new_letter.write(letter_contents.replace('[name]', name.strip()))
