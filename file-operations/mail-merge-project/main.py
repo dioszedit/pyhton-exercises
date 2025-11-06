@@ -7,6 +7,8 @@
 # Tipp2: Ez a módszer is hasznos lesz: https://www.w3schools.com/python/ref_string_replace.asp
 # Tipp3: Ez a módszer szintén segít: https://www.w3schools.com/python/ref_string_strip.asp
 
+# Konstans a levél sablonhoz
+NAME_PLACEHOLDER = '[name]' # ez a helyfoglaló a név helyén szerepel a levél sablonban
 
 # 1. LÉPÉS: A levél sablon beolvasása
 # A 'with open()' automatikusan bezárja a fájlt a használat után
@@ -31,4 +33,4 @@ for name in names_contents:
         # A strip() itt is eltávolítja a whitespace karaktereket, kisbetűsítem és a nevekben található space helyettesítjük _ karakterre
         # pl.: John Small -> letter_for_john_small.txt lesz a fájl neve
         # Az így elkészült személyre szabott levelet írjuk ki a fájlba
-        new_letter.write(letter_contents.replace('[name]', name.strip()))
+        new_letter.write(letter_contents.replace(NAME_PLACEHOLDER, name.strip()))
