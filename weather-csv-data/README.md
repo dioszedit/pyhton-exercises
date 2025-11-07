@@ -10,7 +10,7 @@ Ez a projekt bemutatja, hogyan lehet CSV fájlokat feldolgozni Python-ban két k
 
 ### Python scriptek
 - **`csv_package.py`** - CSV modul használata (alapszintű)
-- **`panda_package_reszletes.py`** - Pandas könyvtár használata (haladó)
+- **`pandas_package.py`** - Pandas könyvtár használata (haladó)
 - **`verseny.csv`** - Pandas által generált kimeneti fájl
 
 ---
@@ -24,7 +24,7 @@ Ez a projekt bemutatja, hogyan lehet CSV fájlokat feldolgozni Python-ban két k
 - ✅ Szöveg → szám konverzió
 - ✅ Fejléc kezelés
 
-### 2. Pandas Könyvtár (`panda_package_reszletes.py`)
+### 2. Pandas Könyvtár (`pandas_package.py`)
 - ✅ DataFrame és Series fogalmak
 - ✅ CSV beolvasás és exportálás
 - ✅ Statisztikai függvények (átlag, max, min)
@@ -57,12 +57,12 @@ Vasárnap,24,Napos
 
 ---
 
-## 🚀 Használat
+## Használat
 
 ### Előfeltételek
 
 ```bash
-# Pandas telepítése (csak a panda_package_reszletes.py-hoz kell)
+# Pandas telepítése (csak a pandas_package.py-hoz kell)
 pip install pandas
 ```
 
@@ -75,7 +75,7 @@ python csv_package.py
 
 #### Pandas verzió:
 ```bash
-python panda_package_reszletes.py
+python pandas_package.py
 ```
 ---
 
