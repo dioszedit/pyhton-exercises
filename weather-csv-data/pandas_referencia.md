@@ -368,7 +368,7 @@ data[data.kor > 18]['új_oszlop'] = 1
 data.loc[data.kor > 18, 'új_oszlop'] = 1
 ```
 
-## 🏃 Teljesítmény Optimalizálás
+## Teljesítmény Optimalizálás
 
 ```python
 # Kategóriák használata szöveg helyett
