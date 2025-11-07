@@ -27,7 +27,7 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`snake-game/`** - Klasszikus Snake (kígyós) játék teknőc grafikával és OOP-vel
 - **`pong-game/`** - Klasszikus Pong játék implementáció teknőc grafikával és OOP-vel.
 - **`turtle-crossing/`** - Turtle Crossing játék implementáció teknőc grafikával és OOP-vel.
-- **`weather-csv-data/`** - CSV formátumban tárolt időjárási adatok feldolgozása (csv vagy pandas csomagokkal).
+- **`csv-data-weather-data/`** - CSV formátumban tárolt időjárási adatok feldolgozása (csv vagy pandas csomagokkal).
 
 ## Használat
 
