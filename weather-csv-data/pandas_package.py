@@ -6,7 +6,7 @@
 import pandas as pd
 
 # CSV FÁJL BEOLVASÁSA
-data = pd.read_csv('weather_data.csv')
+data = pd.read_csv('idojaras_adatok.csv')
 
 # ============================================================================
 # PANDAS ALAPFOGALMAK

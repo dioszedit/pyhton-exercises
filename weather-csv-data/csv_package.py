@@ -4,7 +4,7 @@ import csv
 # Kis mennyiségű adatnál használható módszer
 # A 'with' utasítás automatikusan bezárja a fájlt a blokk végén
 # Az 'encoding='UTF8'' paraméter biztosítja a magyar ékezetes karakterek helyes kezelését
-with open('weather_data.csv', encoding='UTF8') as csv_file:
+with open('idojaras_adatok.csv', encoding='UTF8') as csv_file:
     # csv.reader() objektum létrehozása, amely soronként olvassa a CSV fájlt
     # delimiter=',' paraméter határozza meg, hogy vessző választja el az oszlopokat
     csv_data = csv.reader(csv_file, delimiter=',')
@@ -31,7 +31,7 @@ with open('weather_data.csv', encoding='UTF8') as csv_file:
     print(temperatures)
 
 # Alternatív megoldás dictionary-vel (szótár):
-# with open('weather_data.csv', encoding='UTF8') as csv_file:
+# with open('idojaras_adatok.csv', encoding='UTF8') as csv_file:
 #     csv_data = csv.DictReader(csv_file)
 #     for row in csv_data:
 #         print(row['hőmérséklet'])  # Oszlopnévvel hivatkozhatunk

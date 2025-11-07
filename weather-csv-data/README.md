@@ -5,8 +5,7 @@ Ez a projekt bemutatja, hogyan lehet CSV fájlokat feldolgozni Python-ban két k
 ## Fájlok
 
 ### Adat fájlok
-- **`weather_data.csv`** - Mintaadatok heti időjárási információkkal (magyar nyelvű)
-- **`idojaras_adatok.csv`** - Magyar fordítású verzió
+- **`idojaras_adatok.csv`** - Mintaadatok heti időjárási információkkal
 
 ### Python scriptek
 - **`csv_package.py`** - CSV modul használata (alapszintű)
@@ -37,7 +36,7 @@ Ez a projekt bemutatja, hogyan lehet CSV fájlokat feldolgozni Python-ban két k
 
 ## Adatszerkezet
 
-### `weather_data.csv` tartalma:
+### `idojaras_adatok.csv` tartalma:
 
 ```csv
 nap,hőmérséklet,időjárás
@@ -114,7 +113,7 @@ python pandas_package.py
 ```python
 import csv
 
-with open('weather_data.csv', encoding='UTF8') as csv_file:
+with open('idojaras_adatok.csv', encoding='UTF8') as csv_file:
     csv_data = csv.reader(csv_file, delimiter=',')
     temperatures = []
     for row in list(csv_data)[1:]:  # Fejléc kihagyása
@@ -127,7 +126,7 @@ with open('weather_data.csv', encoding='UTF8') as csv_file:
 ```python
 import pandas as pd
 
-data = pd.read_csv('weather_data.csv')
+data = pd.read_csv('idojaras_adatok.csv')
 
 # Gyors statisztikák
 print(f"Átlag: {data['hőmérséklet'].mean()}")
