@@ -112,11 +112,3 @@ Ez a projekt kiváló gyakorlási lehetőség az alábbi készségek fejlesztés
 Ez egy oktatási projekt, amely a NYC Open Data nyilvános adatait használja.
 
 **Adatlicenc:** [NYC Open Data Terms of Use](https://opendata.cityofnewyork.us/overview/#termsofuse)
-
----
-
-## Köszönetnyilvánítás
-
-- **The Squirrel Census Team** - Az adatgyűjtésért
-- **NYC Parks Department** - A támogatásért
-- **Önkéntesek** - A 14 napos adatgyűjtésért
