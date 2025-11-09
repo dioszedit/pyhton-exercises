@@ -420,6 +420,23 @@ letters[::-1] # megfordítja a listát
 # Eredmény ["f", "e", "d", "c", "b", "a"]
 ```
 
+### Lista előállítása másik listából
+Egy listának az előállítása egy másik listából a következő elvet követi
+*new_list = [new_item for item in other_list]*
+```python
+# Hagyomásnyosan előállítva
+numbers = [1, 2, 3]
+new_list = []
+for n in numbers:
+    new_item = n * 2
+    new_list.append(new_item)
+```
+Lista előállítása 
+```python
+# Egyszerűsítve a fenti for ciklus helyett
+numbers = [1, 2, 3]
+new_list = [ n * 2 for n in numbers]
+```
 ---
 
 ##  BEÉPÍTETT FÜGGVÉNYEK
