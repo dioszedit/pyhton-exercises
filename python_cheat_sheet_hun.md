@@ -257,7 +257,7 @@ lennie, jelezve, hogy a függvényen belül van.
 def my_function():
     print("Hello")
     name = input("A neved:")
-    print("Hello")
+    print(f"Hello {name}!")
 ```
 
 ### Függvények meghívása
@@ -271,9 +271,23 @@ my_function()
 # A my_function függvény kétszer fog lefutni.
 ```
 
+### Függvények bemenetekkel
+
+Az egyszerű függvényeken túl bemenetet is adhatsz a függvénynek. Így minden alkalommal a függvény valami mást csinálhat
+a bemenettől függően. Hasznossabbá és újrafelhasználhatóbbá teszi a függvényt.
+
+```python
+def add(n1, n2):
+    print(n1 + n2)
+
+
+add(2, 3)
+```
+
 ### Függvények bemenetek - korlátlan argumentummal
 
-pl. tetszőleges számot szeretnék összeadni. Akkor úgy tehetjük rugalmasabbá a függvényünket, hogy tetszőleges számú argumentumot használunk.
+pl. tetszőleges számot szeretnék összeadni. Akkor úgy tehetjük rugalmasabbá a függvényünket, hogy tetszőleges számú
+argumentumot használunk.
 
 ```python
 def add(*args):
@@ -282,10 +296,10 @@ def add(*args):
         total += n
     print(total)
 
+
 # Így tesztőleges számú tagot lehet összeadni.
 add(2, 3, 4, 5)
 ```
-### Függvények bemenetekkel
 
 ### Függvények kimenetekkel
 
@@ -453,7 +467,7 @@ for fruit in all_fruits:
     print(fruit)
 ```
 
-###      _ egy For ciklusban
+###        _ egy For ciklusban
 
 Ha az érték, amelyen a for ciklus végigiterál, pl. a szám a tartományban vagy az elem a listában, nem szükséges,
 helyettesítheted egy aláhúzással.
@@ -618,9 +632,11 @@ student_score = {student: random.randint(0, 100) for student in names}
 ### Feltételt használva
 
 - *new_dict = {new_key: new_value for (key, value) in dict.items() if test}*
+
 ```python
 # az előállított szótár csak azokat a tanulói pontszámokat tartalmazza, akik 60 pontnál többet szereztek
-student_score = {'Alex': 0, 'Beth': 96, 'Caroline': 33, 'Dave': 72, 'Eleanor': 90, 'Freddie': 2, 'John': 46, 'Jane': 78, 'Jill': 4, 'Jenny': 97}
+student_score = {'Alex': 0, 'Beth': 96, 'Caroline': 33, 'Dave': 72, 'Eleanor': 90, 'Freddie': 2, 'John': 46, 'Jane': 78,
+                 'Jill': 4, 'Jenny': 97}
 passed_students = {student: score for (student, score) in student_score.items() if score >= 60}
 # Eredmény: {'Beth': 96, 'Dave': 72, 'Eleanor': 90, 'Jane': 78, 'Jenny': 97}
 ```
