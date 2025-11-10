@@ -842,7 +842,21 @@ class Car:
 
 
 my_toyota = Car()
-# Látni fogod, hogy "building car" ki lett írva.
+# Eredményül a "building car" ki lett írva.
+```
+Az init metódusnál is lehetőség van korlátlan kulcsszavas argumentummal hívni.
+
+```python
+class Car:
+    def __init__(self, **kw):
+        # A kw szótárból get() metódus segítségével hiba nélkül kérhetjük le a kulcsszavak értékét.
+        self.name = kw.get("name", "Opel") # ha nem adtad meg nevet, akkor az Opel lesz
+        self.colour = kw.get("colour", "black") # ha nem adta meg a színt, akkor fekete lesz
+        self.year = kw.get("year") # ha nem adta meg, akkor None lesz
+        print("Building car")
+
+
+my_toyota = Car(name="Honda", colour="red")
 ```
 
 ### Osztály öröklődés (Inheritance)
