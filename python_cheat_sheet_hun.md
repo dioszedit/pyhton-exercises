@@ -284,10 +284,10 @@ def add(n1, n2):
 add(2, 3)
 ```
 
-### Függvények bemenetek - korlátlan argumentummal
+### Függvény bemenetek - korlátlan argumentummal
 
 pl. tetszőleges számot szeretnék összeadni. Akkor úgy tehetjük rugalmasabbá a függvényünket, hogy tetszőleges számú
-argumentumot használunk.
+argumentumot használunk. Ilyen esetben  ```*args```  formában (egy * számít az argumentum neve változtatható) adhatjuk meg, ahol az args egy tuple lesz.
 
 ```python
 def add(*args):
@@ -299,6 +299,27 @@ def add(*args):
 
 # Így tesztőleges számú tagot lehet összeadni.
 add(2, 3, 4, 5)
+```
+### Függvény bemenetek - korlátlan kulcszsvas argumentummal
+
+Szintén teszőleges számú argumentummal dolgozhatunk, de itt használhatunk kulcszavas argumentumokat.
+Ilyen esetben  ```**kwargs```  formában (két * számít az argumentum neve változtatható) adhatjuk meg, ahol a kwargs egy szótár lesz.
+
+```python
+def calculate(n, **kwargs):
+    result = n
+    for (key, value) in kwargs.items():
+        if key == "add":
+            result += value
+        elif key == "multiply":
+            result *= value
+        else:
+            print("Invalid key")
+    print(result)
+
+
+# Így tesztőleges számú kulcszavas tagot adhatunk meg
+calculate(3, add=2, multiply=3)
 ```
 
 ### Függvények kimenetekkel
