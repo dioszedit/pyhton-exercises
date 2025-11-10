@@ -271,18 +271,21 @@ my_function()
 # A my_function függvény kétszer fog lefutni.
 ```
 
-### Függvények bemenetekkel
+### Függvények bemenetek - korlátlan argumentummal
 
-Az egyszerű függvényeken túl bemenetet is adhatsz a függvénynek. Így minden alkalommal a függvény valami mást csinálhat
-a bemenettől függően. Hasznossabbá és újrafelhasználhatóbbá teszi a függvényt.
+pl. tetszőleges számot szeretnék összeadni. Akkor úgy tehetjük rugalmasabbá a függvényünket, hogy tetszőleges számú argumentumot használunk.
 
 ```python
-def add(n1, n2):
-    print(n1 + n2)
+def add(*args):
+    total = 0
+    for n in args:
+        total += n
+    print(total)
 
-
-add(2, 3)
+# Így tesztőleges számú tagot lehet összeadni.
+add(2, 3, 4, 5)
 ```
+### Függvények bemenetekkel
 
 ### Függvények kimenetekkel
 
