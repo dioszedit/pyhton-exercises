@@ -28,6 +28,7 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`pong-game/`** - Klasszikus Pong játék implementáció teknőc grafikával és OOP-vel.
 - **`turtle-crossing/`** - Turtle Crossing játék implementáció teknőc grafikával és OOP-vel.
 - **`csv-data-weather-data/`** - CSV formátumban tárolt időjárási adatok feldolgozása (csv vagy pandas csomagokkal).
+- **`nato-alphabet/`** - NATO Fonetikus Ábécé - List Comprehension (Lista létrehozás) és Dictionary Comprehension (Szótár létrehozás) techinikák gyakorlása
 
 ## Használat
 
