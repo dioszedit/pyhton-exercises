@@ -6,7 +6,7 @@ Egy egyszerű asztali alkalmazás mérföld kilométerre való átváltásához,
 
 Ez a program lehetővé teszi a mérföldet kilométerre való gyors átváltását egy felhasználóbarát grafikus felületen keresztül. A projekt oktatási célokra készült, hogy bemutassa a Tkinter alapvető használatát Python-ban.
 
-## 🎯 Funkciók
+## Funkciók
 
 - ✅ Mérföld -> Kilométer átváltás (1 mérföld = 1.60934 km)
 - ✅ Input validáció (csak számokat fogad el)
@@ -82,7 +82,7 @@ Ez a projekt a következő Python és Tkinter koncepciókat demonstrálja:
 6. **String műveletek** - replace(), float() konverziók
 7. **Widget konfigurálás** - config() metódus használata
 
-## 🔧 Kód Struktúra
+## Kód Struktúra
 ```
 main.py
 │
@@ -95,7 +95,7 @@ main.py
 └── Result section         # Frame + Result labels
 ```
 
-## 💡 Továbbfejlesztési Lehetőségek
+## Továbbfejlesztési Lehetőségek
 
 - [ ] Kilométer -> Mérföld irányú átváltás hozzáadása
 - [ ] További mértékegységek (km/h, mph, stb.)
