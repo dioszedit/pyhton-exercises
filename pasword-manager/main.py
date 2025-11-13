@@ -3,6 +3,7 @@ from random import randint, choice, shuffle  # Véletlen számok és elemek vál
 from tkinter import *  # GUI elemek
 from tkinter import messagebox  # Felugró ablak üzenetek
 import pyperclip  # Vágólapra másolás
+import json
 
 # ---------------------------- Konstansok ------------------------------- #
 # Színek
@@ -13,7 +14,40 @@ FONT_NAME = "Arial"
 FONT_SIZE = 12
 
 
-# ---------------------------- Jelszó generálás ------------------------------- #
+# -------------------------- Jelszó keresés ---------------------------- #
+def search_password() -> None:
+    try:
+        # Próbáld meg beolvasni a létező fájlt
+        with open("data.json", mode="r", encoding="utf-8") as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        messagebox.showwarning(
+            title="Keresés",
+            message="Még nem mentettél el egyetlen jelszót sem!"
+        )
+    except json.JSONDecodeError:
+        messagebox.showerror(
+            title="Keresés",
+            message="Az adat fájl megsérült nem olvasható!"
+        )
+    else:
+        if (website := website_input.get().strip()) in data:
+            user = data[website]["username"]
+            password = data[website]["password"]
+
+            messagebox.showinfo(
+                title=f"Website: {website}",
+                message=f"\nEmail: {user}"
+                        f"\nJelszó: {password} \n"
+            )
+        else:
+            messagebox.showwarning(
+                title=f"Website: {website}",
+                message=f"Nincs találat!"
+            )
+
+
+# -------------------------- Jelszó generálás ---------------------------- #
 def generate_password() -> None:
     # Karakter készletek a jelszó generálásához
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
@@ -51,6 +85,13 @@ def save_password() -> None:
     user = user_input.get().strip()
     password = password_input.get().strip()
 
+    new_pass_data = {
+        website: {
+            "username": user,
+            "password": password,
+        }
+    }
+
     # Ellenőrzés: minden mező ki van-e töltve
     if len(website) == 0 or len(user) == 0 or len(password) == 0:
         messagebox.showwarning(
@@ -69,10 +110,29 @@ def save_password() -> None:
     )
 
     if is_yes:
-        # Adatok hozzáfűzése a fájlhoz
-        with open("data.txt", mode="a", encoding="utf-8") as file:
-            file.write(f"{website} | {user} | {password}\n")
+        # Adatok hozzáfűzése a fájlhoz - egyeszerű adattárolás
+        # with open("data.txt", mode="a", encoding="utf-8") as file:
+        #     file.write(f"{website} | {user} | {password}\n")
 
+        # Adatok metéséhez - JSON fájl használata
+        try:
+            # Próbáld meg beolvasni a létező fájlt
+            with open("data.json", mode="r", encoding="utf-8") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            # Ha a fájl nem létezik, hozd létre új adatokkal
+            with open("data.json", mode="w", encoding="utf-8") as file:
+                json.dump(new_pass_data, file, indent=4)
+        except json.JSONDecodeError:
+            # Ha a fájl üres vagy hibás JSON, írd felül
+            with open("data.json", mode="w", encoding="utf-8") as file:
+                json.dump(new_pass_data, file, indent=4)
+        else:
+            # Ha sikerült beolvasni, frissítsd az adatokat
+            data.update(new_pass_data)
+            with open("data.json", mode="w", encoding="utf-8") as file:
+                json.dump(data, file, indent=4)
+        finally:
             # Beviteli mezők ürítése sikeres mentés után
             website_input.delete(0, END)
             user_input.delete(0, END)
@@ -86,9 +146,9 @@ window.title("Jelszó kezelő")
 window.config(padx=20, pady=20, bg=WHITE)
 
 # Canvas a logo képpel
-canvas = Canvas(width=200, height=200, bg=WHITE, highlightthickness=0) # Keret nélküli vászon
+canvas = Canvas(width=200, height=200, bg=WHITE, highlightthickness=0)  # Keret nélküli vászon
 image = PhotoImage(file="logo.png")
-canvas.create_image(100, 100, image=image) # Kép középre helyezése
+canvas.create_image(100, 100, image=image)  # Kép középre helyezése
 canvas.grid(column=1, row=0, columnspan=2, sticky="w", pady=20)
 
 # Website
@@ -96,7 +156,7 @@ website_label = Label(text="Website:", bg=WHITE, font=(FONT_NAME, FONT_SIZE))
 website_label.grid(column=0, row=1, sticky="e")
 
 website_input = Entry(width=35, font=(FONT_NAME, FONT_SIZE))
-website_input.grid(column=1, row=1, columnspan=2, sticky="ew", padx=10, pady=5)
+website_input.grid(column=1, row=1, sticky="ew", padx=10, pady=5)
 
 # Email/Felhasználónév
 user_label = Label(text="Email/Felhasználónév:", bg=WHITE, font=(FONT_NAME, FONT_SIZE))
@@ -113,6 +173,13 @@ password_input = Entry(width=21, font=(FONT_NAME, FONT_SIZE))
 password_input.grid(column=1, row=3, sticky="ew", padx=10, pady=5)
 
 # Gombok
+password_search_button = Button(
+    text="Keresés",
+    font=(FONT_NAME, FONT_SIZE),
+    command=search_password
+)
+password_search_button.grid(column=2, row=1, sticky="ew", padx=10, pady=5)
+
 password_generate_button = Button(
     text="Jelszó generálás",
     font=(FONT_NAME, FONT_SIZE),
