@@ -114,7 +114,7 @@ def save_password() -> None:
         # with open("data.txt", mode="a", encoding="utf-8") as file:
         #     file.write(f"{website} | {user} | {password}\n")
 
-        # Adatok metéséhez - JSON fájl használata
+        # Adatok mentéséhez - JSON fájl használata
         try:
             # Próbáld meg beolvasni a létező fájlt
             with open("data.json", mode="r", encoding="utf-8") as file:
