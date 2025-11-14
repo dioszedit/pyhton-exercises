@@ -31,6 +31,8 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`nato-alphabet/`** - NATO Fonetikus Ábécé - List Comprehension (Lista létrehozás) és Dictionary Comprehension (Szótár létrehozás) techinikák gyakorlása
 - **`miles-to-km-converter/`** -  Mérföld kilométerre való átváltása, Tkinter GUI-val készítve
 - **`pomodoro-timer/`** -  Pomodoro időzítő alkalmazás Tkinter GUI-t használva
+- **`password-manager/`** -  Jelszó kezelő alkalmazás Tkinter GUI-t használva (+ json fájl kezelés)
+- **`flash-card/`** -  Flash Cards - Angol-Magyar Szótanuló alkalmazás Tkinter GUI-t használva
 
 ## Használat
 
