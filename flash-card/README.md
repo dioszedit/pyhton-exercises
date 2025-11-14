@@ -7,11 +7,11 @@ nyelvben íródott, Tkinter GUI könyvtárat használ, és egyszerű, intuitív 
 
 ### Főbb jellemzők:
 
-- ✅ Grafikus felhasználói felület (GUI)
-- ✅ Automatikus kártyaforgatás 3 másodperc után
-- ✅ Tanult szavak eltávolítása a listából
-- ✅ Haladás mentése és folytatása
-- ✅ Vizuális visszajelzés (számláló)
+-  Grafikus felhasználói felület (GUI)
+-  Automatikus kártyaforgatás 3 másodperc után
+-  Tanult szavak eltávolítása a listából
+-  Haladás mentése és folytatása
+-  Vizuális visszajelzés (számláló)
 
 ## Funkciók
 
@@ -176,37 +176,37 @@ Ez a projekt kiváló példa a következő programozási fogalmak gyakorlására
 
 ### 1. **Python Alapok**
 
-- ✅ Függvények definiálása és használata
-- ✅ Globális változók kezelése
-- ✅ Típushintingek (`-> None`, `list[dict]`)
-- ✅ Docstring-ek használata (dokumentációs szövegek)
+-  Függvények definiálása és használata
+-  Globális változók kezelése
+-  Típushintingek (`-> None`, `list[dict]`)
+-  Docstring-ek használata (dokumentációs szövegek)
 
 ### 2. **GUI Programozás (Tkinter)**
 
-- ✅ Ablak létrehozása és konfigurálása
-- ✅ Canvas használata képek és szövegek megjelenítéséhez
-- ✅ Gombok és események kezelése
-- ✅ Layout kezelés (grid)
+-  Ablak létrehozása és konfigurálása
+-  Canvas használata képek és szövegek megjelenítéséhez
+-  Gombok és események kezelése
+-  Layout kezelés (grid)
 
 ### 3. **Adatkezelés (Pandas)**
 
-- ✅ CSV fájlok olvasása és írása
-- ✅ DataFrame használata
-- ✅ Dictionary konverziók
+-  CSV fájlok olvasása és írása
+-  DataFrame használata
+-  Dictionary konverziók
 
 ### 4. **Hibakezelés**
 
-- ✅ Try-except blokkok használata
-- ✅ Fájl létezés ellenőrzése (`os.path.exists`)
+-  Try-except blokkok használata
+-  Fájl létezés ellenőrzése (`os.path.exists`)
 
 ### 5. **Időzítés**
 
-- ✅ `window.after()` metódus használata késleltetett függvényhíváshoz
-- ✅ Időzítő leállítása (`window.after_cancel()`)
+-  `window.after()` metódus használata késleltetett függvényhíváshoz
+-  Időzítő leállítása (`window.after_cancel()`)
 
 ### 6. **Véletlenszerűség**
 
-- ✅ `random.choice()` használata véletlen elem kiválasztásához
+-  `random.choice()` használata véletlen elem kiválasztásához
 
 ## Licence
 
