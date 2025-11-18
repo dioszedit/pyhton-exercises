@@ -55,19 +55,6 @@ A következő modulok beépítettek a Python-ban, nem kell külön telepíteni:
 - `smtplib`
 - `email`
 
-## Konfiguráció
-
-### Email címek beállítása
-
-Nyisd meg a `send_motivation_quotes.py` fájlt és módosítsd a következő sorokat:
-
-```python
-sender_email = "kuldo@mailproba.com"  # Cseréld le a saját email címedre
-sender_name = "Küldő Neve"  # Adj meg egy nevet
-receiver_email = "fogado@mailproba.com"  # Cseréld le a címzett email címére
-receiver_name = "Fogadó Neve"  # A címzett neve
-```
-
 ### Napok beállítása
 
 A script jelenleg **hétfőn** küld emailt (mivel `day_of_week == 0`).

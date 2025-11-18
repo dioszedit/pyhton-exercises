@@ -30,12 +30,12 @@ port = os.getenv("MAIL_PORT", default=587)  # SMTP port (alapértelmezett: 587 T
 # EMAIL BEÁLLÍTÁSOK
 # ============================================================================
 # Küldő email címe és neve
-sender_email = "kuldo@mailproba.com"
-sender_name = "Küldő Neve"
+sender_email = os.getenv("SENDER_EMAIL")
+sender_name = os.getenv("SENDER_NAME")
 
 # Fogadó email címe és neve
-receiver_email = "fogado@mailproba.com"
-receiver_name = "Fogadó Neve"
+receiver_email = os.getenv("RECEIVER_EMAIL")
+receiver_name = os.getenv("RECEIVER_NAME")
 
 # ============================================================================
 # EMAIL ÜZENET LÉTREHOZÁSA
