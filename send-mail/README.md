@@ -34,6 +34,12 @@ MAIL_SMTP=smtp.gmail.com
 MAIL_PORT=587
 MAIL_USERNAME=te_email_cimed@gmail.com
 MAIL_PASSWORD=titkos_jelszavad
+
+SENDER_EMAIL="kuldo@mailproba.com"
+SENDER_NAME="Küldő Neve"
+
+RECEIVER_EMAIL="fogado@mailproba.com"
+RECEIVER_NAME="Fogadó Neve"
 ```
 
 **FONTOS BIZTONSÁGI MEGJEGYZÉSEK:**
@@ -118,7 +124,7 @@ projekt_mappa/
 │
 ├── send_motivation_quotes.py    # Fő Python script
 ├── idezetek_magyarul.txt         # Motivációs idézetek fájlja
-├── .env                          # Környezeti változók (érzékeny adatok)
+├── .env.example                  # Környezeti változók (érzékeny adatok) minta fájl
 ├── .gitignore                    # Git kizárási lista
 └── README.md                     # Ez a dokumentáció
 ```
