@@ -1,6 +1,7 @@
 # Python Gyakorló Feladatok
 
-Ez a repository különböző Python gyakorló projekteket tartalmaz, amelyek az objektumorientált programozás (OOP) alapelveinek elsajátítását szolgálják.
+Ez a repository különböző Python gyakorló projekteket tartalmaz, amelyek az objektumorientált programozás (OOP)
+alapelveinek elsajátítását szolgálják.
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -8,6 +9,7 @@ Ez a repository különböző Python gyakorló projekteket tartalmaz, amelyek az
 ## Projekt Célja
 
 A repository oktatási célú mini-projekteket gyűjt össze, amelyek segítenek:
+
 - Python alapok gyakorlásában
 - OOP elvek megértésében és alkalmazásában
 - Tiszta, moduláris kód írásában
@@ -22,17 +24,22 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`quiz-game-in-oop/`** - Interaktív kvízjáték OOP alapokon
 - **`coffe-machine-in-oop/`** - Kávégép szimulátor objektumorientált megközelítéssel
 - **`turtle-graphics/`** - Turtle Graphics (teknőc grafika) - Python Gyakorlatok
-- **`hirst_spot_painting/`** - Hirst-stílusú pöttyös festmény készítése - teknőc grafikával
+- **`hirst-spot-painting/`** - Hirst-stílusú pöttyös festmény készítése - teknőc grafikával
 - **`turtle-race/`** - Teknőc Verseny Szimuláció - teknőc grafikával
 - **`snake-game/`** - Klasszikus Snake (kígyós) játék teknőc grafikával és OOP-vel
 - **`pong-game/`** - Klasszikus Pong játék implementáció teknőc grafikával és OOP-vel.
 - **`turtle-crossing/`** - Turtle Crossing játék implementáció teknőc grafikával és OOP-vel.
 - **`csv-data-weather-data/`** - CSV formátumban tárolt időjárási adatok feldolgozása (csv vagy pandas csomagokkal).
-- **`nato-alphabet/`** - NATO Fonetikus Ábécé - List Comprehension (Lista létrehozás) és Dictionary Comprehension (Szótár létrehozás) techinikák gyakorlása
-- **`miles-to-km-converter/`** -  Mérföld kilométerre való átváltása, Tkinter GUI-val készítve
-- **`pomodoro-timer/`** -  Pomodoro időzítő alkalmazás Tkinter GUI-t használva
-- **`password-manager/`** -  Jelszó kezelő alkalmazás Tkinter GUI-t használva (+ json fájl kezelés)
-- **`flash-card/`** -  Flash Cards - Angol-Magyar Szótanuló alkalmazás Tkinter GUI-t használva
+- **`nato-alphabet/`** - NATO Fonetikus Ábécé - List Comprehension (Lista létrehozás) és Dictionary Comprehension (
+  Szótár létrehozás) techinikák gyakorlása
+- **`miles-to-km-converter/`** - Mérföld kilométerre való átváltása, Tkinter GUI-val készítve
+- **`pomodoro-timer/`** - Pomodoro időzítő alkalmazás Tkinter GUI-t használva
+- **`password-manager/`** - Jelszó kezelő alkalmazás Tkinter GUI-t használva (+ json fájl kezelés)
+- **`flash-card/`** - Flash Cards - Angol-Magyar Szótanuló alkalmazás Tkinter GUI-t használva
+- **`automated-birthday-wisher/`** - Automatikus születésnapi köszöntő (e-mail küldés, dátumkezelés)
+- **`csv-data-central-park-squirrel/`** - Central Park mókusadatok elemzése (Pandas könyvtárral)
+- **`file-operations/`** - Fájlkezelési alapok (szöveges fájlok olvasása és írása)
+- **`send-mail/`** - E-mail küldés Python segítségével (SMTP protokoll)
 
 ## Használat
 
@@ -51,6 +58,7 @@ Részletes információkért és használati útmutatóért tekintsd meg az egye
 ## Tanulási Témák
 
 A projektek az alábbi témákat fedik le:
+
 - Osztályok és objektumok
 - Enkapszuláció
 - Modularitás
@@ -66,6 +74,13 @@ A projektek az alábbi témákat fedik le:
 - Lista és tuple műveletek
 - Iteráció és ciklusok
 - Képfeldolgozás alapjai
+
+## Segédanyagok
+
+A gyakorló projektek mellett a főkönyvtárban található néhány hasznos segédlet is, amelyek támogatják a tanulást:
+
+- **[Python Alapok (HUN)](python_cheat_sheet_hun.md)**: Átfogó, magyar nyelvű összefoglaló a legfontosabb Python parancsokról, típusokról és szerkezetekről.
+- **[Hibakezelés Ábra](python_hiba_kezeles_abra.png)**: Vizuális folyamatábra a Python kivételkezelési (try-except-else-finally) logikájának gyors átlátásához.
 
 ## Licenc
 
