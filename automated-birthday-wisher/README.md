@@ -31,12 +31,12 @@ cp .env.example .env
 Nyisd meg a `.env` fájlt és töltsd ki a saját adataiddal:
 
 ```env
-MAIL_USERNAME="temail@gmail.com"
+MAIL_USERNAME="temail@gmail.com" # ez lehet username vagy email cím - szolgáltató függő
 MAIL_PASSWORD="app_password"
 MAIL_SMTP="smtp.gmail.com"
 MAIL_PORT=587
 
-SENDER_EMAIL="temail@gmail.com"
+SENDER_EMAIL="temail@gmail.com"  # küldő email címe
 SENDER_NAME="Neved"
 ```
 
@@ -48,7 +48,7 @@ Szerkeszd a `birthdays.csv` fájlt és add hozzá az embereket:
 név,email,év,hónap,nap
 Anya,mam@example.com,1965,10,1
 Apa,dad@example.com,1963,2,15
-Öcsém,bro@example.com,1990,11,20
+Öcsi,bro@example.com,1990,11,20
 ```
 
 **Oszlopok:**
@@ -79,7 +79,7 @@ Boldog születésnapot!
 Minden jót kívánok az idei évre!
 
 Üdvözlettel,
-Angela
+János
 ```
 
 ## Használat
@@ -105,7 +105,7 @@ Ha nincs ma születésnap:
 Nincs ma szülinap.
 ```
 
-## 🎯 Használat
+## Használat
 
 ### Egyszerű futtatás
 
