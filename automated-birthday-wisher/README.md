@@ -105,7 +105,88 @@ Ha nincs ma születésnap:
 Nincs ma szülinap.
 ```
 
+## 🎯 Használat
+
+### Egyszerű futtatás
+
+```bash
+python main.py
+```
+
+### Kimenet példa
+
+```
+1 db mai születésnap találva!
+Email küldése: János (janos@example.com)
+✓ Email sikeresen elküldve: János
+
+Kész! Minden email elküldve.
+```
+
+Ha nincs ma születésnap:
+
+```
+Nincs ma szülinap.
+```
+
 ### Automatizálás
+
+#### PythonAnywhere - Ingyenes felhő megoldás
+
+A [PythonAnywhere](https://www.pythonanywhere.com/) egy ingyenes Python hosting szolgáltatás, amely ideális ehhez a
+projekthez.
+
+**Miért jó?**
+
+- ✅ Ingyenes (Basic account elegendő)
+- ✅ Nincs szükség saját számítógépre, ami egész nap fut
+- ✅ Beépített ütemezett feladat (scheduled task) funkció
+- ✅ Egyszerű webes felület
+
+**Beállítás lépésről lépésre:**
+
+1. **Regisztráció**
+    - Menj a [pythonanywhere.com](https://www.pythonanywhere.com/) oldalra
+    - Hozz létre egy ingyenes fiókot (Beginner account)
+
+2. **Fájlok feltöltése**
+    - Kattints a **Files** menüpontra
+    - Hozz létre egy új mappát: `birthday-wisher`
+    - Töltsd fel a projektfájlokat:
+        - `main.py`
+        - `birthdays.csv`
+        - `.env` (a kitöltött környezeti változókkal!)
+        - `letter_templates/` mappa tartalmával
+
+3. **Ütemezett feladat beállítása**
+    - Kattints a **Tasks** menüpontra
+    - **Daily scheduled task** résznél:
+        - **Time (UTC):** `07:00` (Ez 9:00 magyar idő szerint)
+        - **Command:**
+
+```bash
+       cd /home/felhasznalonev/birthday-wisher && python3 main.py
+```
+
+       (Cseréld ki a `felhasznalonev`-et a saját PythonAnywhere felhasználónevedre!)
+
+- Kattints a **Create** gombra
+
+4. **Teszt futtatás**
+    - A Bash konzolban futtasd manuálisan:
+
+```bash
+     cd birthday-wisher
+     python3 main.py
+```
+
+- Ellenőrizd, hogy minden rendben működik-e
+
+**Megjegyzések:**
+
+- Az ingyenes fiók UTC időzónában működik, ezért +1 vagy +2 órát kell számolni (nyári/téli időszámítás szerint)
+- Az ütemezett feladat minden nap ugyanabban az időpontban fut
+- A log kimenet megtekinthető a **Tasks** oldalon
 
 #### macOS/Linux - Cron
 
