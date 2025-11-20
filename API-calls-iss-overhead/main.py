@@ -154,7 +154,7 @@ if is_night() and is_iss_overhead():
     receiver_email = "fogado@mailproba.com"
     receiver_name = "Fogadó Neve"
 
-    body = "Az űrállomás feletünk halad át"
+    body = "Az űrállomás felettünk halad át!"
 
     # ============================================================================
     # EMAIL ÜZENET LÉTREHOZÁSA
