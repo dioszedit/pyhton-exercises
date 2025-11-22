@@ -25,6 +25,7 @@ class QuestionData:
             q_num (int): A betöltendő kérdések száma
         """
         self.question_list = self.load_question(q_num)
+        self.max_retry_count = 5 # Adat betöltések maximális száma
 
     def load_question(self, q_num: int) -> list[Question]:
         """
@@ -52,9 +53,13 @@ class QuestionData:
 
         data = response.json()
         # Ha az API hibakódot ad vissza, várunk és újrapróbálkozunk
-        if data["response_code"] != 0:
+        if data["response_code"] != 0 and self.max_retry_count > 0:
             time.sleep(1)
+            self.max_retry_count -= 1
             return self.load_question(q_num)
+
+        if data["response_code"] != 0 and self.max_retry_count == 0:
+            raise Exception("The maximum number of retries for loading data has been reached.")
 
         # Question objektumok létrehozása, HTML entitások dekódolásával
         return [Question(html.unescape(question["question"]), question["correct_answer"] == "True")
