@@ -40,6 +40,8 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`csv-data-central-park-squirrel/`** - Central Park mókusadatok elemzése (Pandas könyvtárral)
 - **`file-operations/`** - Fájlkezelési alapok (szöveges fájlok olvasása és írása)
 - **`send-mail/`** - E-mail küldés Python segítségével (SMTP protokoll)
+- **`quiz-game-tkinter/`** - Interaktív kvízjáték Tkinter GUI-val - a kérdések az Open Trivia DB API segítségével
+  kerülnek lekérdezésre
 
 ## Használat
 
@@ -79,8 +81,10 @@ A projektek az alábbi témákat fedik le:
 
 A gyakorló projektek mellett a főkönyvtárban található néhány hasznos segédlet is, amelyek támogatják a tanulást:
 
-- **[Python Alapok (HUN)](python_cheat_sheet_hun.md)**: Átfogó, magyar nyelvű összefoglaló a legfontosabb Python parancsokról, típusokról és szerkezetekről.
-- **[Hibakezelés Ábra](python_hiba_kezeles_abra.png)**: Vizuális folyamatábra a Python kivételkezelési (try-except-else-finally) logikájának gyors átlátásához.
+- **[Python Alapok (HUN)](python_cheat_sheet_hun.md)**: Átfogó, magyar nyelvű összefoglaló a legfontosabb Python
+  parancsokról, típusokról és szerkezetekről.
+- **[Hibakezelés Ábra](python_hiba_kezeles_abra.png)**: Vizuális folyamatábra a Python kivételkezelési (
+  try-except-else-finally) logikájának gyors átlátásához.
 
 ## Licenc
 
