@@ -42,6 +42,9 @@ Minden almappa egy külön álló, független gyakorló projektet tartalmaz saj�
 - **`send-mail/`** - E-mail küldés Python segítségével (SMTP protokoll)
 - **`quiz-game-tkinter/`** - Interaktív kvízjáték Tkinter GUI-val - a kérdések az Open Trivia DB API segítségével
   kerülnek lekérdezésre
+- **`rain_alert/`** - Időjárás figyelő és esőriasztó alkalmazás API használatával és környezeti változók kezelésével
+- **`API-calls-iss-overhead/`** - ISS (Nemzetközi Űrállomás) pozíció követő, amely értesítést küld, ha az állomás felettünk halad el
+
 
 ## Használat
 

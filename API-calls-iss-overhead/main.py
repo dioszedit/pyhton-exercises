@@ -3,7 +3,6 @@ import smtplib  # SMTP protokoll kezelésére (email küldéshez)
 from datetime import datetime  # Dátum és idő kezeléséhez szükséges osztály
 from email.mime.multipart import MIMEMultipart  # Többrészes email üzenetek létrehozásához
 from email.mime.text import MIMEText  # Szöveges email tartalom létrehozásához
-import sys  # Rendszer-specifikus paraméterek és függvények (program leállításához)
 from dotenv import load_dotenv  # .env fájlból környezeti változók betöltésére
 from zoneinfo import ZoneInfo  # Időzóna kezeléshez (pl. Europe/Budapest)
 
