@@ -6,7 +6,7 @@ Ez a projekt egy automatizált esőriasztó rendszer, amely az OpenWeatherMap AP
 
 - Aktuális időjárási adatok lekérése földrajzi koordináták alapján.
 - A következő 12 óra előrejelzésének elemzése.
-- Automatikus értesítés (e-mail vagy SMS - függőben), ha eső várható.
+- Automatikus értesítés (SMS), ha eső várható.
 - Biztonságos API kulcs kezelés környezeti változókkal.
 
 ## Előfeltételek
@@ -22,7 +22,7 @@ A projekt futtatásához szükséged lesz egy ingyenes API kulcsra az [OpenWeath
 2. Nyisd meg a `.env` fájlt és add meg az adataidat:
    - `OWM_API_KEY`: Az OpenWeatherMap API kulcsod.
    - `MY_LAT` / `MY_LONG`: A tartózkodási helyed koordinátái.
-   - (Opcionális - megvalósítása függgőben): E-mail vagy Twilio beállítások az értesítéshez.
+   -  Twilio beállítások az SMS értesítéshez.
 
 3. Telepítsd a szükséges csomagokat:
    ```bash
